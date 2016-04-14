@@ -1,0 +1,8 @@
+local.properties
+.java-version
+.idea
+*.iml
+*.ipr
+*.iws
+.gradle
+build/
