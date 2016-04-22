@@ -11,6 +11,9 @@ buildscript {
 apply plugin: 'idea'
 apply plugin: 'com.android.library'
 
+version = VERSION_NAME
+group = GROUP
+
 repositories {
     jcenter()
     mavenCentral()
@@ -70,4 +73,13 @@ android {
     sourceSets {
 
     }
+}
+
+ext {
+  artifact = 'segment-integration'
+  publishedGroupId = GROUP
+  libraryVersion = VERSION_NAME
+  gitUrl = 'https://github.com/tapstream/analytics-android-integration-tapstream'
+
+  developerName = 'Adam Bard'
 }
