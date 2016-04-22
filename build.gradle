@@ -10,6 +10,8 @@ buildscript {
 
 apply plugin: 'idea'
 apply plugin: 'com.android.library'
+apply plugin: 'maven'
+apply plugin: 'signing'
 
 version = VERSION_NAME
 group = GROUP
@@ -69,17 +71,4 @@ dependencies {
     testCompile 'org.powermock:powermock-classloading-xstream:1.6.2'
 }
 
-android {
-    sourceSets {
-
-    }
-}
-
-ext {
-  artifact = 'segment-integration'
-  publishedGroupId = GROUP
-  libraryVersion = VERSION_NAME
-  gitUrl = 'https://github.com/tapstream/analytics-android-integration-tapstream'
-
-  developerName = 'Adam Bard'
-}
+apply from: rootProject.file('gradle/gradle-mvn-push.gradle')
