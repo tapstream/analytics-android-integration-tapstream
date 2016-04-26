@@ -11,3 +11,6 @@ android:
 
     # Extra android repos
     - extra-android-m2repository
+
+script:
+    - ./gradlew build connectedCheck --info
