@@ -220,9 +220,7 @@ public class TapstreamIntegrationTest {
 
         TapstreamIntegration.updateSettings(conf, settings);
 
-        System.out.println(String.format("GLOBAL EVENT PARAMS LEN: %d", conf.globalEventParams.size()));
-
-        assertThat(conf.globalEventParams).containsExactly(
+        assertThat(conf.globalEventParams).containsOnly(
                 MapEntry.entry("my-key", "my-value"),
                 MapEntry.entry("my-other-key", "my-other-value")
         );
