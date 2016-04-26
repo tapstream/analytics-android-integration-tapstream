@@ -2,8 +2,6 @@ package com.tapstream.sdk.segmentintegration;
 
 import android.app.Application;
 import android.content.SharedPreferences;
-import android.support.test.filters.LargeTest;
-import android.support.test.runner.AndroidJUnit4;
 
 
 import com.segment.analytics.Analytics;
@@ -54,9 +52,8 @@ import static org.powermock.api.mockito.PowerMockito.verifyNoMoreInteractions;
  */
 
 
-//@RunWith(RobolectricGradleTestRunner.class)
-//@Config(constants = BuildConfig.class, sdk = 18)
-@RunWith(AndroidJUnit4.class)
+@RunWith(RobolectricGradleTestRunner.class)
+@Config(constants = BuildConfig.class, sdk = 18)
 @PowerMockIgnore({ "org.mockito.*", "org.robolectric.*", "android.*", "org.json.*" })
 @PrepareForTest(Tapstream.class)
 public class TapstreamIntegrationTest {
